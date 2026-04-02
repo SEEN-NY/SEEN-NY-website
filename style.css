@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #000;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 30px 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  color: #00a651;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #00a651;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 60px;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #555;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid div {
+  padding: 15px;
+  border: 1px solid #eee;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00a651;
+  text-decoration: none;
+}
+
+.video-primary iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.video-secondary .placeholder {
+  border: 1px dashed #ccc;
+  padding: 40px;
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+
+.links li {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 30px;
+  }
+}
