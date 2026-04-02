@@ -1,83 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SEEN NY</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+<script>
+// SECTION REVEAL ON SCROLL
+const modules = document.querySelectorAll(".module");
 
-<header class="header">
-  <div class="logo">
-    <img src="seen-logo.png" alt="SEEN NY Logo">
-  </div>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.15
+});
 
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#why">Why</a>
-    <a href="#what">What We Do</a>
-    <a href="#coop">Cooperative Cannabis Project</a>
-    <a href="#media">Media</a>
-    <a href="#thought">Thought Leadership</a>
-    <a href="#contact">Contact</a>
-    <a href="#invest">Invest</a>
-  </nav>
-
-  <div class="cta-nav">
-    <a class="donate" href="#donate">DONATE</a>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Building an equitable cannabis economy through cooperative power.</h1>
-  <p class="hero-sub">SEEN NY advances economic justice through anti-racist systems change in New York’s cannabis industry.</p>
-</section>
-
-<section id="about" class="section tint">
-  <h2>ABOUT SEEN NY</h2>
-  <p>S.E.E.N is a consortium of businesses and entrepreneurs building a vibrant, equitable cannabis industry that serves as a positive economic engine.</p>
-  <p>SEEN NY is a nonprofit organization dedicated to economic justice through anti-racist systems change.</p>
-</section>
-
-<section id="why" class="section">
-  <h2>WHY</h2>
-  <p>Cannabis legalization presents a historic opportunity for equity and ownership.</p>
-</section>
-
-<section id="what" class="section">
-  <h2>WHAT WE DO</h2>
-  <div class="grid-3">
-    <div class="card">Economic Justice Programming</div>
-    <div class="card">Cooperative Development</div>
-    <div class="card">Cannabis Industry Training</div>
-  </div>
-</section>
-
-<section id="coop" class="section">
-  <h2>COOPERATIVE CANNABIS PROJECT</h2>
-  <p>Worker-owned cannabis incubator led by communities impacted by prohibition.</p>
-</section>
-
-<section id="media" class="section tint">
-  <h2>MEDIA</h2>
-</section>
-
-<section id="thought" class="section">
-  <h2>THOUGHT LEADERSHIP</h2>
-</section>
-
-<section id="contact" class="section tint">
-  <h2>CONTACT</h2>
-</section>
-
-<footer class="footer">
-  <p>SEEN NY</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+modules.forEach(module => {
+  observer.observe(module);
+});
+</script>
